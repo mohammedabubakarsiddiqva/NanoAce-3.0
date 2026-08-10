@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="All_Digital">
+        <Vil>DC.VIL</Vil>
+        <Vih>DC.VIH</Vih>
+        <Vol>DC.VOL</Vol>
+        <Voh>DC.VOH</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="Digital_Bidirectional">
+        <Vil>DC.VIL</Vil>
+        <Vih>DC.VIH</Vih>
+        <Vol>DC.VOL</Vol>
+        <Voh>DC.VOH</Voh>
+        <Iol>DC.IOL</Iol>
+        <Ioh>DC.IOH</Ioh>
+        <Vcom>DC.VT</Vcom>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="Digital_Output_Pins">
+        <Vil>DC.VIL</Vil>
+        <Vih>DC.VIH</Vih>
+        <Vol>DC.VOL</Vol>
+        <Voh>DC.VOH</Voh>
+        <Iol>DC.IOL</Iol>
+        <Ioh>DC.IOH</Ioh>
+        <Vcom>DC.VT</Vcom>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="SCL_EEPROM">
+        <Vil>DC.VIL_I2C</Vil>
+        <Vih>DC.VIH_I2C</Vih>
+        <Vol>DC.VOL_I2C</Vol>
+        <Voh>DC.VOH_I2C</Voh>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="SDA_EEPROM">
+        <Vil>DC.VIL_I2C</Vil>
+        <Vih>DC.VIH_I2C</Vih>
+        <Vol>DC.VOL_I2C</Vol>
+        <Voh>DC.VOH_I2C</Voh>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+    <PowerPinLevelSets>
+      <PowerPinLevelSet pin="VCC_DUT">
+        <Vf>DC.VCC_DUT</Vf>
+        <Ic>DC.ILIMIT_DUT</Ic>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="VCC_EEPROM">
+        <Vf>DC.VCC_EEPROM</Vf>
+        <Ic>DC.ILIMIT_EEPROM</Ic>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="VCC_TEMP">
+        <Vf>DC.VCC_TEMP</Vf>
+        <Ic>DC.ILIMIT_TEMP</Ic>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="PROG_AB_READ_PULL_UP">
+        <Vf>DC.PROG_AB_READ_PULL_UP</Vf>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="RELAY_SUPPLY_DB">
+        <Vf>DC.VCC_RELAY_DB</Vf>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="RELAY_SUPPLY_MB">
+        <Vf>DC.VCC_RELAY_MB</Vf>
+      </PowerPinLevelSet>
+    </PowerPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>

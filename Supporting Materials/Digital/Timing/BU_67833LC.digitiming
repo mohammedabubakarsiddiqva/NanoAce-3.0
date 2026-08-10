@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimingFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/Timing">
+  <TimingSheet>
+    <TimeSets>
+      <TimeSet name="tSPI">
+        <Period>AC.Spi_Period</Period>
+        <PinEdges>
+          <PinEdge pin="All_Digital">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.Spi_Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="SCLK">
+            <ReturnToHigh>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>0.5*AC.Spi_Period</Return>
+              <Off>AC.Spi_Period</Off>
+            </ReturnToHigh>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="MOSI">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.Spi_Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="MISO">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.Spi_Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="SS_L">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.Spi_Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tWait">
+        <Period>AC.tWait</Period>
+        <PinEdges>
+          <PinEdge pin="All_Digital">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.tWait</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>AC.tWait</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tSPI_Start">
+        <Period>AC.Spi_Period</Period>
+        <PinEdges>
+          <PinEdge pin="All_Digital">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.Spi_Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tSPI_Stop">
+        <Period>AC.Spi_Period</Period>
+        <PinEdges>
+          <PinEdge pin="All_Digital">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>AC.Spi_Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*AC.Spi_Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+    </TimeSets>
+  </TimingSheet>
+</TimingFile>

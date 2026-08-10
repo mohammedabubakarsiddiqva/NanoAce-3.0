@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
+  <Section name="DC">
+    <f:Formula symbol="VCC_DUT">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>Nominal NanoAce Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIH">
+      <f:Definition>2.7 V</f:Definition>
+      <f:Comment>Input Level HIgh Threshold</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIL">
+      <f:Definition>0.2 V</f:Definition>
+      <f:Comment>Input Level Low Threshold</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOH">
+      <f:Definition>2.4 V</f:Definition>
+      <f:Comment>Ouput Comparator High Threshold</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOL">
+      <f:Definition>0.4 V</f:Definition>
+      <f:Comment>Output Comparator Low Threshold</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="IOL">
+      <f:Definition>4 mA</f:Definition>
+      <f:Comment>Active Load Sink urrent</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="IOH">
+      <f:Definition>-4 mA</f:Definition>
+      <f:Comment>Active Load Source Current</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VT">
+      <f:Definition>DC.VCC_DUT/2</f:Definition>
+      <f:Comment>Mid Point Voltage</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VCC_EEPROM">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>EEPROM Nominal Supply Voltage</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VCC_TEMP">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>Nominal Temperature IC Supply(-0.3 V to 6 V)</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="PROG_AB_READ_PULL_UP">
+      <f:Definition>3.3 V</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="VCC_RELAY">
+      <f:Definition>5 V</f:Definition>
+      <f:Comment>Relay Coil Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="ILIMIT_DUT">
+      <f:Definition>610 mA</f:Definition>
+      <f:Comment>Current Limit of Nano Ace Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="ILIMIT_TEMP">
+      <f:Definition>1 mA</f:Definition>
+      <f:Comment>Current Limit of Temp IC supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="ILIMIT_EEPROM">
+      <f:Definition>5 mA</f:Definition>
+      <f:Comment>Current Limit of EEPROM IC Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIH_I2C">
+      <f:Definition>3 V</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="VIL_I2C">
+      <f:Definition>0 V</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="VOL_I2C">
+      <f:Definition>0.4 V</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="VOH_I2C">
+      <f:Definition>2.4 V</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="ILIMIT_RELAY">
+      <f:Definition>600 mA</f:Definition>
+      <f:Comment>Current Limit of Relay Coil Supply</f:Comment>
+    </f:Formula>
+  </Section>
+  <Section name="AC">
+    <f:Formula symbol="SPI_PERIOD">
+      <f:Definition>100 ns</f:Definition>
+      <f:Comment>SPI Operating at 10 MHz</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="I2C_PERIOD">
+      <f:Definition>1 µs</f:Definition>
+      <f:Comment>I2C Operating at 1 MHz</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="WAIT">
+      <f:Definition>3 µs</f:Definition>
+      <f:Comment>time delay required for source and capture</f:Comment>
+    </f:Formula>
+  </Section>
+</Specifications>

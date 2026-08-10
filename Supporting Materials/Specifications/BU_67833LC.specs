@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
+  <Section name="DC">
+    <f:Formula symbol="Vcc_DUT">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>Nominal Nano-Ace Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vih">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>Input Drive High Voltage</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vil">
+      <f:Definition>0 V</f:Definition>
+      <f:Comment>Input Drive Low Voltage</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Voh">
+      <f:Definition>2.4 V</f:Definition>
+      <f:Comment>Output Comparator High Threshold</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vol">
+      <f:Definition>0.4 V</f:Definition>
+      <f:Comment>Output Comparator Low Threshold</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Iol">
+      <f:Definition>4 mA</f:Definition>
+      <f:Comment>Active Load Sink Current(Tester to DUT)</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Ioh">
+      <f:Definition>-4 mA</f:Definition>
+      <f:Comment>Active Load Source Current(DUT to Tester)</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vt">
+      <f:Definition>DC.Vcc_DUT/2</f:Definition>
+      <f:Comment>Commuatating Midpoint voltage</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vcc_EEPROM">
+      <f:Definition>3 V</f:Definition>
+      <f:Comment>Nominal EEPROM Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vcc_Temp">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>Nominal Temperature IC Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Prog_AB_Read_Pull_Up">
+      <f:Definition>3.3 V</f:Definition>
+      <f:Comment>Need to Get Confirmed</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vcc_Relay_DB">
+      <f:Definition>5 V</f:Definition>
+      <f:Comment>Daughter Board Relay Coil Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Vcc_Relay_MB">
+      <f:Definition>5 V</f:Definition>
+      <f:Comment>Mother Board Relay Coil Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Ilim_DUT">
+      <f:Definition>800 mA</f:Definition>
+      <f:Comment>Current Limit of Nano Ace Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Ilim_Temp">
+      <f:Definition>1 mA</f:Definition>
+      <f:Comment>Current Limit of Temp Circuit Supply</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Ilim_EEPROM">
+      <f:Definition>5 mA</f:Definition>
+      <f:Comment>Current Limit of EEPROM Supply</f:Comment>
+    </f:Formula>
+  </Section>
+  <Section name="AC">
+    <f:Formula symbol="Spi_Period">
+      <f:Definition>100 ns</f:Definition>
+      <f:Comment>Operating at 10 MHz for spi interface</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="I2c_Period">
+      <f:Definition>1 µs</f:Definition>
+      <f:Comment>Operating at 1 MHz for i2c interface</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="tWait">
+      <f:Definition>3 µs</f:Definition>
+      <f:Comment>time delay required for source and capture</f:Comment>
+    </f:Formula>
+  </Section>
+</Specifications>

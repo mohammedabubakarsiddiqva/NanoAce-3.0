@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="132924B0E7F6C48DE0FF95023029E93B4B8B37FD34AE931BAB37D862D0E5C6D4B8346BF7AE1FC7F1663C7436A498A5EF853A8C27A4DDC221AE673BCC5E5311F9" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.13.3.49862" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.13.3.49862" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.13.3.49862" Name="Digital Pattern Editor" Version="24.6.0" />
+	</SourceModelFeatureSet>
+	<Project xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="1" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="2" ModelDefinitionType="NationalInstruments.ProjectExplorer.Modeling.ProjectDataManager" Name="ProjectExplorer">
+			<ProjectExplorer />
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="3" ModelDefinitionType="DefaultTarget" Name="DefaultTarget">
+			<DefaultTarget />
+			<EmbeddedDefinitionReference Id="49" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}CaptureResultsDefinition" Name="CaptureResults">
+				<CaptureResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="51" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}BurstResultsDefinition" Name="BurstResults">
+				<BurstResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="53" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}DigitalScopeDefinition" Name="DigitalScope">
+				<DigitalScopeDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<FileReference Id="62" ModelDefinitionType="TimingDefinition" Name="BU_67833LC.digitiming" StoragePath="Digital\Timing\BU_67833LC.digitiming" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="c4d81872e735451c9c73b15ae9947ac2" ModelDefinitionType="PinLevelsDefinition" Name="BU_67833LC.digilevels" StoragePath="Digital\Levels\BU_67833LC.digilevels" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="a62ffde4487243e9b2d38e9ecdbdc5a7" ModelDefinitionType="SpecificationsDefinition" Name="BU_67833LC.specs" StoragePath="Specifications\BU_67833LC.specs" />
+			<FileReference Id="9a26651e6c6547bbb0dd595723a668bd" ModelDefinitionType="PinMap" Name="BU_67833LC_NEW.pinmap" StoragePath="Pin Maps\BU_67833LC_NEW.pinmap" p4:IsActive="False" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="5257d1dd97074754af9ff24fcbc2744c" ModelDefinitionType="SourceWaveformDefinition" Name="SPI_Source_Reg_Read.tdms" StoragePath="Digital\Source Waveforms\SPI_Source_Reg_Read.tdms" />
+			<FileReference Id="323c6a1d0cf54259a81d95a3fbe17648" ModelDefinitionType="CaptureWaveformDefinition" Name="SPI_Capture_Reg.digicapture" StoragePath="Digital\Capture Waveforms\SPI_Capture_Reg.digicapture" />
+			<FileReference Id="f1f37e3348c5492d979b42fa2a764fa0" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_Reg_Write.digipat" StoragePath="Digital\Compiled Patterns\SPI_Reg_Write.digipat" />
+			<FileReference Id="9d0213e79d5b4025bd9fda7fd2ed743f" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_Reg_Read.digipat" StoragePath="Digital\Compiled Patterns\SPI_Reg_Read.digipat" />
+			<FileReference Id="9995298c533544aeae324883c8420b57" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_Ram_Read.digipat" StoragePath="Digital\Compiled Patterns\SPI_Ram_Read.digipat" />
+			<FileReference Id="6c797479dcec4f1abc36cb90f40d479b" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_Ram_Write.digipat" StoragePath="Digital\Compiled Patterns\SPI_Ram_Write.digipat" />
+			<FileReference Id="35e25b4fc8514156bee1f2339051b314" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_Ram_Read_Burst.digipat" StoragePath="Digital\Compiled Patterns\SPI_Ram_Read_Burst.digipat" />
+			<FileReference Id="ebcdbd75b3f04474bdf64ffe7e099f73" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_Ram_Write_Burst.digipat" StoragePath="Digital\Compiled Patterns\SPI_Ram_Write_Burst.digipat" />
+			<FileReference Id="f521e556dc2940f5b4ef05601843192a" ModelDefinitionType="PinLevelsDefinition" Name="PinLevels.digilevels" StoragePath="Digital\Levels\PinLevels.digilevels" />
+			<FileReference Id="d15714a6315f46a2b0af67722f6062f2" ModelDefinitionType="SpecificationsDefinition" Name="BU_67833LCNEW.specs" StoragePath="Specifications\BU_67833LCNEW.specs" />
+			<FileReference Id="8715e55b1f8c44baa1f2fed2f796a388" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_REG_READ_NEW.digipat" StoragePath="Digital\Compiled Patterns\SPI_REG_READ_NEW.digipat" />
+			<FileReference Id="b59098b550184ee0b2acd60cfd51f643" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_REG_WRITE_NEW.digipat" StoragePath="Digital\Compiled Patterns\SPI_REG_WRITE_NEW.digipat" />
+			<FileReference Id="ac794d3b5a664794ba81a9d3e2c06c93" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_RAM_READ_NEW.digipat" StoragePath="Digital\Compiled Patterns\SPI_RAM_READ_NEW.digipat" />
+			<FileReference Id="46e3ff83b917404bbbddd55b775bbe06" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_RAM_WRITE_NEW.digipat" StoragePath="Digital\Compiled Patterns\SPI_RAM_WRITE_NEW.digipat" />
+			<FileReference Id="1e773e86712848dab64c5f9cb5df3261" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_RAM_READ_BURST_NEW.digipat" StoragePath="Digital\Compiled Patterns\SPI_RAM_READ_BURST_NEW.digipat" />
+			<FileReference Id="3c7d2aa267ae422a9f05f68087f90cbd" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_RAM_WRITE_BURST_NEW.digipat" StoragePath="Digital\Compiled Patterns\SPI_RAM_WRITE_BURST_NEW.digipat" />
+			<FileReference Id="d04386beed234695b5892fa368c0f5e5" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="Idle.digipat" StoragePath="Digital\Compiled Patterns\Idle.digipat" />
+			<FileReference Id="fdc4bf9c7aef42e19e978bd5fb54c986" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="Reset.digipat" StoragePath="Digital\Compiled Patterns\Reset.digipat" />
+			<FileReference Id="d8c25c592ed941efb82b3705d33d6548" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="PowerDown.digipat" StoragePath="Digital\Compiled Patterns\PowerDown.digipat" />
+			<FileReference Id="aefb5654b63c4a61bbb7a6c7a9dd1740" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="RtBoot_Idle.digipat" StoragePath="Digital\Compiled Patterns\RtBoot_Idle.digipat" />
+			<FileReference Id="69da0501b7034b669ca4891665906860" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="Dummy_Pattern_Read.digipat" StoragePath="Digital\Compiled Patterns\Dummy_Pattern_Read.digipat" />
+			<FileReference Id="d3361253ecff4da5a6ceec5d80769124" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="Dummy_Pattern_Write.digipat" StoragePath="Digital\Compiled Patterns\Dummy_Pattern_Write.digipat" />
+			<FileReference Id="3c93fa8739c84cdbb4cfe198993219fa" ModelDefinitionType="SourceWaveformDefinition" Name="SPI_Source_Ram_Write.tdms" StoragePath="Digital\Source Waveforms\SPI_Source_Ram_Write.tdms" />
+			<FileReference Id="84acc972984d42419bf3e01192bf379a" ModelDefinitionType="SourceWaveformDefinition" Name="SPI_Source_Reg_Write.tdms" StoragePath="Digital\Source Waveforms\SPI_Source_Reg_Write.tdms" />
+			<FileReference Id="da686f0acfb9443f91d87881bff6cd40" ModelDefinitionType="SourceWaveformDefinition" Name="SPI_Source_Ram_Read.tdms" StoragePath="Digital\Source Waveforms\SPI_Source_Ram_Read.tdms" />
+			<FileReference Id="cbb8f7c585244b9c8b3575f1acb411ba" ModelDefinitionType="CaptureWaveformDefinition" Name="SPI_Capture_Mem.digicapture" StoragePath="Digital\Capture Waveforms\SPI_Capture_Mem.digicapture" />
+			<FileReference Id="de891f64370145ab865b42929be163f2" ModelDefinitionType="PinMap" Name="BU_67833LC_NEW_.pinmap" StoragePath="Pin Maps\BU_67833LC_NEW_.pinmap" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+		</NameScopingEnvoy>
+		<EmbeddedDefinitionReference Id="7" ModelDefinitionType="DigitalPatternEditor.ProjectPropertiesDefinition" Name="ProjectProperties">
+			<ProjectPropertiesDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+		</EmbeddedDefinitionReference>
+	</Project>
+	<ProjectInformation xmlns="http://www.ni.com/PlatformFramework" />
+</SourceFile>

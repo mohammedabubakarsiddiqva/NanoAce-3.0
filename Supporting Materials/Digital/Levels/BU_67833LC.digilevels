@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="All_Digital">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="Digital_Output_Pins">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.Vt</Vcom>
+        <Vterm>0</Vterm>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="Digital_Bidirectional">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.Vt</Vcom>
+        <Vterm>0</Vterm>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+    <PowerPinLevelSets>
+      <PowerPinLevelSet pin="VCC_DUT">
+        <Vf>DC.Vcc_DUT</Vf>
+        <Ic>DC.Ilim_DUT</Ic>
+        <Sense>Remote</Sense>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="VCC_EEPROM">
+        <Vf>DC.Vcc_EEPROM</Vf>
+        <Ic>DC.Ilim_EEPROM</Ic>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="VCC_TEMP">
+        <Vf>DC.Vcc_Temp</Vf>
+        <Ic>DC.Ilim_Temp</Ic>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="PROG_AB_READ_PULL_UP">
+        <Vf>DC.Prog_AB_Read_Pull_Up</Vf>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="RELAY_SUPPLY_DB">
+        <Vf>DC.Vcc_Relay_DB</Vf>
+      </PowerPinLevelSet>
+      <PowerPinLevelSet pin="RELAY_SUPPLY_MB">
+        <Vf>DC.Vcc_Relay_MB</Vf>
+      </PowerPinLevelSet>
+    </PowerPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>

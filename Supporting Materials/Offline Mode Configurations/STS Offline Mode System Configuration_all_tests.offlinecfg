@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration schemaVersion="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ni.com/TestStand/SemiconductorModule/SystemConfiguration.xsd">
+	<PartNumber Value="866675-01" />
+	<PXIChassis Number="1" Model="NI PXIe-1095">
+		<PXI Name="VST_5841_C1_S02" Model="NI PXIe-5841" Slot="2" NeedsIvi="false" Variant="" AuxPosition="Unspecified">
+			<PortControlModule Name="PCM1" Model="NI STS-5532">
+				<PortModule Name="PM1" Model="NI STS-5531" DigitalSlot="1" AnalogChannel="1" />
+				<PortModule Name="PM2" Model="NI STS-5531" DigitalSlot="2" AnalogChannel="2" />
+				<PortModule Name="PM3" Model="NI STS-5531" DigitalSlot="3" AnalogChannel="3" />
+			</PortControlModule>
+		</PXI>
+		<PXI Name="HSD_6571_C1_S05_P174" Model="NI PXIe-6571" Slot="5" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="HSD_6571_C1_S06_P170" Model="NI PXIe-6571" Slot="6" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="HSD_6571_C1_S07_P166" Model="NI PXIe-6571" Slot="7" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="HSD_6571_C1_S14_P154" Model="NI PXIe-6571" Slot="14" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SYNC_CHASSIS_1_6674T_C1_S10" Model="NI PXIe-6674T" Slot="10" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="RELAY_2567_C1_S11_P162_P163" Model="NI PXI-2567" Slot="11" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="RELAY_2567_C1_S12_P118_P119" Model="NI PXI-2567" Slot="12" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C1_S16_P111_CH0-3" Model="NI PXIe-4147" Slot="16" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C1_S17_P111_CH4-7" Model="NI PXIe-4147" Slot="17" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+	</PXIChassis>
+	<PXIChassis Number="2" Model="NI PXIe-1095">
+		<PXI Name="SCOPE_5172_C2_S02_P110_CH0-7" Model="NI PXIe-5172 (8CH - 325T)" Slot="2" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SCOPE_5172_C2_S04_P130_CH0-7" Model="NI PXIe-5172 (8CH - 325T)" Slot="4" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C2_S06_P107_CH0-3" Model="NI PXIe-4147" Slot="6" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="FGEN_5433_C2_S08_P150" Model="NI PXIe-5433 (2CH)" Slot="8" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="VST_5841_C2_S09" Model="NI PXIe-5841" Slot="9" NeedsIvi="false" Variant="" AuxPosition="Unspecified">
+			<PortControlModule Name="PCM4" Model="NI STS-5532">
+				<PortModule Name="PM7" Model="NI STS-5531" DigitalSlot="7" AnalogChannel="1" />
+				<PortModule Name="PM8" Model="NI STS-5531" DigitalSlot="8" AnalogChannel="2" />
+				<PortModule Name="PM9" Model="NI STS-5531" DigitalSlot="9" AnalogChannel="3" />
+			</PortControlModule>
+		</PXI>
+		<PXI Name="PPS_4110_C2_S12_P143" Model="NI PXI-4110" Slot="12" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="DMM_4081_C2_S13_P143" Model="NI PXIe-4081" Slot="13" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C2_S15_P142_CH0-3" Model="NI PXIe-4147" Slot="15" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C2_S16_P142_CH4-7" Model="NI PXIe-4147" Slot="16" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C2_S17_P131_CH0-3" Model="NI PXIe-4147" Slot="17" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C2_S18_P131_CH4-7" Model="NI PXIe-4147" Slot="18" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+	</PXIChassis>
+	<PXIChassis Number="3" Model="NI PXIe-1095">
+		<PXI Name="VST_5841_C3_S03" Model="NI PXIe-5841" Slot="3" NeedsIvi="false" Variant="" AuxPosition="Unspecified">
+			<PortControlModule Name="PCM2" Model="NI STS-5532">
+				<PortModule Name="PM10" Model="NI STS-5531" DigitalSlot="10" AnalogChannel="1" />
+				<PortModule Name="PM11" Model="NI STS-5531" DigitalSlot="11" AnalogChannel="2" />
+				<PortModule Name="PM12" Model="NI STS-5531" DigitalSlot="12" AnalogChannel="3" />
+			</PortControlModule>
+		</PXI>
+		<PXI Name="SMU_4147_C3_S08_P107_CH4-7" Model="NI PXIe-4147" Slot="8" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C3_S17_P151_CH0-3" Model="NI PXIe-4147" Slot="17" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C3_S18_P151_CH4-7" Model="NI PXIe-4147" Slot="18" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+	</PXIChassis>
+	<PXIChassis Number="4" Model="NI PXIe-1095">
+		<PXI Name="VST_5841_C4_S12" Model="NI PXIe-5841" Slot="12" NeedsIvi="false" Variant="" AuxPosition="Unspecified">
+			<PortControlModule Name="PCM3" Model="NI STS-5532">
+				<PortModule Name="PM4" Model="NI STS-5531" DigitalSlot="4" AnalogChannel="1" />
+				<PortModule Name="PM5" Model="NI STS-5531" DigitalSlot="5" AnalogChannel="2" />
+				<PortModule Name="PM6" Model="NI STS-5531" DigitalSlot="6" AnalogChannel="3" />
+			</PortControlModule>
+		</PXI>
+		<PXI Name="SMU_4163_C4_S03_P138_P135" Model="NI PXIe-4163" Slot="3" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C4_S07_P127_CH0-3" Model="NI PXIe-4147" Slot="7" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+		<PXI Name="SMU_4147_C4_S08_P127_CH4-7" Model="NI PXIe-4147" Slot="8" NeedsIvi="false" Variant="" AuxPosition="Unspecified" />
+	</PXIChassis>
+	<Devices>
+		<USB Name="DIO_6509_C1_USB" Model="NI USB-6509" />
+	</Devices>
+</SystemConfiguration>

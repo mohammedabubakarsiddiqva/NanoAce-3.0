@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PinMap schemaVersion="1.6" xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Instruments>
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S05" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S06" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S07" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S014" numberOfChannels="32" group="Digital" />
+		<NIDCPowerInstrument name="SMU_4147_C1_S16" numberOfChannels="4">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIDCPowerInstrument name="SMU_4147_C1_S17" numberOfChannels="4">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIDCPowerInstrument name="SMU_4147_C2_S15" numberOfChannels="4">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIDCPowerInstrument name="SMU_4147_C2_S16" numberOfChannels="4">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIDCPowerInstrument name="SMU_4147_C2_S17" numberOfChannels="4">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIDCPowerInstrument name="SMU_4147_C2_S18" numberOfChannels="4">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIDCPowerInstrument name="PPS_4110_C2_S12" numberOfChannels="3">
+			<ChannelGroup name="CommonDCPowerChannelGroup" />
+		</NIDCPowerInstrument>
+		<NIRelayDriverModule name="RELAY_2567_C1_S11" numberOfControlLines="64" />
+		<NIRelayDriverModule name="RELAY_2567_C1_S12" numberOfControlLines="64" />
+		<NIScopeInstrument name="SCOPE_5172_C2_S02" numberOfChannels="8" group="Scope" />
+		<NIScopeInstrument name="SCOPE_5172_C2_S04" numberOfChannels="8" group="Scope" />
+		<NIFGenInstrument name="FGEN_5433_C2_S08" numberOfChannels="1" />
+		<NIDmmInstrument name="DMM_4081_C2_S13" />
+		<Instrument name="BusCard_1" instrumentTypeId="BU67111">
+			<ChannelGroup id="1553_Channels">
+				<Channel id="1" />
+				<Channel id="2" />
+			</ChannelGroup>
+		</Instrument>
+		<Instrument name="BusCard_2" instrumentTypeId="BU67111">
+			<ChannelGroup id="1553_Channels">
+				<Channel id="1" />
+				<Channel id="2" />
+			</ChannelGroup>
+		</Instrument>
+	</Instruments>
+	<Pins>
+		<DUTPin name="VCC_DUT" />
+		<DUTPin name="TX_INH" />
+		<DUTPin name="SCLK" />
+		<DUTPin name="MOSI" />
+		<DUTPin name="MISO" />
+		<DUTPin name="RTAD_4" />
+		<DUTPin name="RTAD_3" />
+		<DUTPin name="RTAD_2" />
+		<DUTPin name="RTAD_1" />
+		<DUTPin name="RTAD_0" />
+		<DUTPin name="RTAD_P" />
+		<DUTPin name="RT_AD_LATCH" />
+		<DUTPin name="RTBOOT_L" />
+		<DUTPin name="INT_L" />
+		<DUTPin name="SSFLAG_L_EXT_TRIG" />
+		<DUTPin name="MSTCLR_L" />
+		<DUTPin name="CLOCK_IN" />
+		<DUTPin name="SCL_DUT" />
+		<DUTPin name="SDA_DUT" />
+		<DUTPin name="AB_SDCLK" />
+		<DUTPin name="AB_RESETN" />
+		<SystemPin name="SDA_EEPROM" />
+		<SystemPin name="SCL_EEPROM" />
+		<DUTPin name="VCC_EEPROM" />
+		<DUTPin name="PROG_A_READ" />
+		<DUTPin name="PROG_B_READ" />
+		<DUTPin name="PROG_AB_READ_PULL_UP" />
+		<DUTPin name="VZAP_A_MONOSTABLE_BYPASS" />
+		<DUTPin name="VZAP_B_MONOSTABLE_BYPASS" />
+		<DUTPin name="PROG_A_SOFT_TRIM_MB" />
+		<DUTPin name="PROG_B_SOFT_TRIM_MB" />
+		<DUTPin name="PROG_A_SOFT_TRIM_PULL_UP_MB" />
+		<DUTPin name="PROG_B_SOFT_TRIM_PULL_UP_MB" />
+		<DUTPin name="PROG_AB_PMOS_PULL_UP_MB" />
+		<SystemPin name="VCC_TEMP" />
+		<DUTPin name="TEMP_OUT" />
+		<SystemPin name="RELAY_SUPPLY_6V" />
+		<SystemPin name="RELAY_SUPPLY_20V" />
+		<DUTPin name="TX_RX_AB_SCOPE" />
+		<DUTPin name="TX_RX_AB_FGEN_MB" />
+		<DUTPin name="SS_L" />
+		<DUTPin name="PROG_A_DIGITAL" />
+		<DUTPin name="PROG_B_DIGITAL" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="All_Digital">
+			<PinReference pin="TX_INH" />
+			<PinReference pin="SCLK" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="MISO" />
+			<PinReference pin="RTAD_4" />
+			<PinReference pin="RTAD_3" />
+			<PinReference pin="RTAD_2" />
+			<PinReference pin="RTAD_1" />
+			<PinReference pin="RTAD_0" />
+			<PinReference pin="RTAD_P" />
+			<PinReference pin="RT_AD_LATCH" />
+			<PinReference pin="RTBOOT_L" />
+			<PinReference pin="INT_L" />
+			<PinReference pin="SSFLAG_L_EXT_TRIG" />
+			<PinReference pin="MSTCLR_L" />
+			<PinReference pin="CLOCK_IN" />
+			<PinReference pin="SCL_DUT" />
+			<PinReference pin="SDA_DUT" />
+			<PinReference pin="AB_SDCLK" />
+			<PinReference pin="AB_RESETN" />
+			<PinReference pin="PROG_A_READ" />
+			<PinReference pin="PROG_B_READ" />
+			<PinReference pin="SS_L" />
+			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS" />
+			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS" />
+			<PinReference pin="PROG_A_SOFT_TRIM_MB" />
+			<PinReference pin="PROG_B_SOFT_TRIM_MB" />
+			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
+			<PinReference pin="PROG_B_SOFT_TRIM_PULL_UP_MB" />
+			<PinReference pin="TEMP_OUT" />
+		</PinGroup>
+		<PinGroup name="Digital_Input_Pins">
+			<PinReference pin="SCLK" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="RTAD_4" />
+			<PinReference pin="RTAD_3" />
+			<PinReference pin="RTAD_2" />
+			<PinReference pin="RTAD_1" />
+			<PinReference pin="RTAD_0" />
+			<PinReference pin="RTAD_P" />
+			<PinReference pin="RT_AD_LATCH" />
+			<PinReference pin="CLOCK_IN" />
+			<PinReference pin="RTBOOT_L" />
+			<PinReference pin="MSTCLR_L" />
+			<PinReference pin="SSFLAG_L_EXT_TRIG" />
+			<PinReference pin="TX_INH" />
+			<PinReference pin="AB_SDCLK" />
+			<PinReference pin="AB_RESETN" />
+			<PinReference pin="SS_L" />
+			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS" />
+			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS" />
+			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
+			<PinReference pin="PROG_B_SOFT_TRIM_PULL_UP_MB" />
+		</PinGroup>
+		<PinGroup name="Digital_Output_Pins">
+			<PinReference pin="MISO" />
+			<PinReference pin="INT_L" />
+			<PinReference pin="SCL_DUT" />
+			<PinReference pin="TEMP_OUT" />
+		</PinGroup>
+		<PinGroup name="Digital_Bidirectional">
+			<PinReference pin="SDA_DUT" />
+			<PinReference pin="PROG_A_READ" />
+			<PinReference pin="PROG_B_READ" />
+			<PinReference pin="PROG_A_SOFT_TRIM_MB" />
+			<PinReference pin="PROG_B_SOFT_TRIM_MB" />
+		</PinGroup>
+		<PinGroup name="I2C_Pins_DUT">
+			<PinReference pin="SCL_DUT" />
+			<PinReference pin="SDA_DUT" />
+		</PinGroup>
+		<PinGroup name="SPI_Pins">
+			<PinReference pin="SCLK" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="MISO" />
+			<PinReference pin="SS_L" />
+		</PinGroup>
+		<PinGroup name="DUT_Pins">
+			<PinReference pin="TX_INH" />
+			<PinReference pin="SCLK" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="MISO" />
+			<PinReference pin="RTAD_4" />
+			<PinReference pin="RTAD_3" />
+			<PinReference pin="RTAD_2" />
+			<PinReference pin="RTAD_1" />
+			<PinReference pin="RTAD_0" />
+			<PinReference pin="RTAD_P" />
+			<PinReference pin="RT_AD_LATCH" />
+			<PinReference pin="RTBOOT_L" />
+			<PinReference pin="INT_L" />
+			<PinReference pin="SSFLAG_L_EXT_TRIG" />
+			<PinReference pin="MSTCLR_L" />
+			<PinReference pin="SCL_DUT" />
+			<PinReference pin="CLOCK_IN" />
+			<PinReference pin="SDA_DUT" />
+			<PinReference pin="AB_SDCLK" />
+			<PinReference pin="AB_RESETN" />
+			<PinReference pin="PROG_A_READ" />
+			<PinReference pin="PROG_B_READ" />
+			<PinReference pin="SS_L" />
+			<PinReference pin="VCC_DUT" />
+		</PinGroup>
+		<PinGroup name="Continuity_Pins">
+			<PinReference pin="TX_INH" />
+			<PinReference pin="SCLK" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="MISO" />
+			<PinReference pin="RTAD_4" />
+			<PinReference pin="RTAD_3" />
+			<PinReference pin="RTAD_2" />
+			<PinReference pin="RTAD_1" />
+			<PinReference pin="RTAD_0" />
+			<PinReference pin="RTAD_P" />
+			<PinReference pin="RT_AD_LATCH" />
+			<PinReference pin="RTBOOT_L" />
+			<PinReference pin="INT_L" />
+			<PinReference pin="SSFLAG_L_EXT_TRIG" />
+			<PinReference pin="MSTCLR_L" />
+			<PinReference pin="CLOCK_IN" />
+		</PinGroup>
+		<PinGroup name="Leakage_Pins">
+			<PinReference pin="CLOCK_IN" />
+			<PinReference pin="RTBOOT_L" />
+			<PinReference pin="SSFLAG_L_EXT_TRIG" />
+			<PinReference pin="RTAD_4" />
+			<PinReference pin="RTAD_3" />
+			<PinReference pin="RTAD_2" />
+			<PinReference pin="RTAD_1" />
+			<PinReference pin="RTAD_0" />
+			<PinReference pin="RTAD_P" />
+			<PinReference pin="TX_INH" />
+			<PinReference pin="RT_AD_LATCH" />
+			<PinReference pin="SCLK" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="MSTCLR_L" />
+			<PinReference pin="SS_L" />
+		</PinGroup>
+		<PinGroup name="Pattern_Pins">
+			<PinReference pin="SS_L" />
+			<PinReference pin="TX_INH" />
+			<PinReference pin="SCLK" />
+			<PinReference pin="RTAD_4" />
+			<PinReference pin="MISO" />
+			<PinReference pin="MOSI" />
+			<PinReference pin="RTAD_3" />
+			<PinReference pin="RTAD_2" />
+			<PinReference pin="RTAD_1" />
+			<PinReference pin="RTAD_0" />
+			<PinReference pin="RTAD_P" />
+			<PinReference pin="RTBOOT_L" />
+			<PinReference pin="RT_AD_LATCH" />
+			<PinReference pin="INT_L" />
+			<PinReference pin="SSFLAG_L_EXT_TRIG" />
+			<PinReference pin="MSTCLR_L" />
+		</PinGroup>
+	</PinGroups>
+	<Relays>
+		<SystemRelay name="K12_DUT_I2C_PATH_SELECT_RELAY" />
+		<SystemRelay name="K13_DUT_SDA_VCC_GND_SELECT_RELAY" />
+		<SystemRelay name="K14_DUT_SCL_VCC_GND_SELECT_RELAY" />
+		<SystemRelay name="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" />
+		<SystemRelay name="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" />
+		<SystemRelay name="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" />
+		<SystemRelay name="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" />
+		<SystemRelay name="K20_TRIM_READ_BACK_SELECT_RELAY" />
+		<SystemRelay name="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" />
+		<SystemRelay name="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" />
+		<SystemRelay name="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" />
+		<SystemRelay name="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" />
+		<SystemRelay name="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" />
+		<SystemRelay name="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" />
+		<SystemRelay name="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" />
+		<SystemRelay name="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" />
+		<SystemRelay name="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" />
+		<SystemRelay name="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" />
+		<SystemRelay name="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" />
+		<SystemRelay name="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" />
+		<SystemRelay name="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" />
+		<SystemRelay name="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" />
+		<SystemRelay name="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" />
+		<SystemRelay name="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" />
+		<SystemRelay name="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" />
+		<SystemRelay name="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" />
+		<SystemRelay name="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" />
+		<SystemRelay name="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" />
+		<SystemRelay name="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" />
+		<SystemRelay name="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" />
+		<SystemRelay name="K15_EEPROM_SITE_SELECT_RELAY" />
+		<SystemRelay name="K16_EEPROM_SITE_SELECT_RELAY" />
+		<SystemRelay name="K17_EEPROM_SITE_SELECT_RELAY" />
+		<SystemRelay name="K18_EEPROM_SITE_SELECT_RELAY" />
+		<SystemRelay name="K5_TRANSCEIVER_SITE_SELECT_RELAY" />
+		<SystemRelay name="K6_TRANSCEIVER_SITE_SELECT_RELAY" />
+		<SystemRelay name="K7_TRANSCEIVER_SITE_SELECT_RELAY" />
+		<SystemRelay name="K2_TRANSCEIVER_SITE_SELECT_RELAY" />
+		<SystemRelay name="K3_TRANSCEIVER_SITE_SELECT_RELAY" />
+		<SystemRelay name="K4_TRANSCEIVER_SITE_SELECT_RELAY" />
+		<SystemRelay name="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" />
+		<SystemRelay name="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" />
+		<SystemRelay name="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" />
+	</Relays>
+	<RelayConfigurations>
+		<RelayConfiguration name="DutPowerUpRelayConfig">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+		</RelayConfiguration>
+	</RelayConfigurations>
+	<Sites>
+		<Site siteNumber="0" />
+		<Site siteNumber="1" />
+		<Site siteNumber="2" />
+		<Site siteNumber="3" />
+	</Sites>
+	<Connections>
+		<Connection pin="AB_RESETN" siteNumber="0" instrument="HSD_6571_C1_S06" channel="25" />
+		<Connection pin="AB_RESETN" siteNumber="1" instrument="HSD_6571_C1_S07" channel="27" />
+		<Connection pin="AB_RESETN" siteNumber="2" instrument="HSD_6571_C1_S05" channel="1" />
+		<Connection pin="AB_RESETN" siteNumber="3" instrument="HSD_6571_C1_S014" channel="2" />
+		<Connection pin="AB_SDCLK" siteNumber="0" instrument="HSD_6571_C1_S06" channel="26" />
+		<Connection pin="AB_SDCLK" siteNumber="1" instrument="HSD_6571_C1_S07" channel="31" />
+		<Connection pin="AB_SDCLK" siteNumber="2" instrument="HSD_6571_C1_S05" channel="2" />
+		<Connection pin="AB_SDCLK" siteNumber="3" instrument="HSD_6571_C1_S014" channel="0" />
+		<Connection pin="CLOCK_IN" siteNumber="0" instrument="HSD_6571_C1_S06" channel="2" />
+		<Connection pin="CLOCK_IN" siteNumber="1" instrument="HSD_6571_C1_S07" channel="12" />
+		<Connection pin="CLOCK_IN" siteNumber="2" instrument="HSD_6571_C1_S05" channel="12" />
+		<Connection pin="CLOCK_IN" siteNumber="3" instrument="HSD_6571_C1_S014" channel="11" />
+		<Connection pin="INT_L" siteNumber="0" instrument="HSD_6571_C1_S06" channel="0" />
+		<Connection pin="INT_L" siteNumber="1" instrument="HSD_6571_C1_S07" channel="11" />
+		<Connection pin="INT_L" siteNumber="2" instrument="HSD_6571_C1_S05" channel="11" />
+		<Connection pin="INT_L" siteNumber="3" instrument="HSD_6571_C1_S014" channel="13" />
+		<Connection pin="MISO" siteNumber="0" instrument="HSD_6571_C1_S06" channel="9" />
+		<Connection pin="MISO" siteNumber="1" instrument="HSD_6571_C1_S07" channel="25" />
+		<Connection pin="MISO" siteNumber="2" instrument="HSD_6571_C1_S05" channel="3" />
+		<Connection pin="MISO" siteNumber="3" instrument="HSD_6571_C1_S014" channel="7" />
+		<Connection pin="MOSI" siteNumber="0" instrument="HSD_6571_C1_S06" channel="8" />
+		<Connection pin="MOSI" siteNumber="1" instrument="HSD_6571_C1_S07" channel="21" />
+		<Connection pin="MOSI" siteNumber="2" instrument="HSD_6571_C1_S05" channel="23" />
+		<Connection pin="MOSI" siteNumber="3" instrument="HSD_6571_C1_S014" channel="10" />
+		<Connection pin="MSTCLR_L" siteNumber="0" instrument="HSD_6571_C1_S06" channel="3" />
+		<Connection pin="MSTCLR_L" siteNumber="1" instrument="HSD_6571_C1_S07" channel="18" />
+		<Connection pin="MSTCLR_L" siteNumber="2" instrument="HSD_6571_C1_S05" channel="27" />
+		<Connection pin="MSTCLR_L" siteNumber="3" instrument="HSD_6571_C1_S014" channel="20" />
+		<Connection pin="PROG_AB_PMOS_PULL_UP_MB" siteNumber="0,1,2,3" instrument="SMU_4147_C2_S16" channel="3" />
+		<Connection pin="PROG_AB_READ_PULL_UP" siteNumber="0,1,2,3" instrument="SMU_4147_C1_S16" channel="0" />
+		<Connection pin="PROG_A_DIGITAL" siteNumber="0" instrument="HSD_6571_C1_S05" channel="28" />
+		<Connection pin="PROG_A_DIGITAL" siteNumber="1" instrument="HSD_6571_C1_S07" channel="1" />
+		<Connection pin="PROG_A_DIGITAL" siteNumber="2" instrument="HSD_6571_C1_S05" channel="6" />
+		<Connection pin="PROG_A_DIGITAL" siteNumber="3" instrument="HSD_6571_C1_S05" channel="14" />
+		<Connection pin="PROG_A_READ" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S07" channel="4" />
+		<Connection pin="PROG_A_SOFT_TRIM_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="26" />
+		<Connection pin="PROG_A_SOFT_TRIM_PULL_UP_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="31" />
+		<Connection pin="PROG_B_DIGITAL" siteNumber="0" instrument="HSD_6571_C1_S05" channel="29" />
+		<Connection pin="PROG_B_DIGITAL" siteNumber="1" instrument="HSD_6571_C1_S07" channel="2" />
+		<Connection pin="PROG_B_DIGITAL" siteNumber="2" instrument="HSD_6571_C1_S05" channel="5" />
+		<Connection pin="PROG_B_DIGITAL" siteNumber="3" instrument="HSD_6571_C1_S05" channel="7" />
+		<Connection pin="PROG_B_READ" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S07" channel="3" />
+		<Connection pin="PROG_B_SOFT_TRIM_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="27" />
+		<Connection pin="PROG_B_SOFT_TRIM_PULL_UP_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="21" />
+		<Connection pin="RTAD_0" siteNumber="0" instrument="HSD_6571_C1_S06" channel="5" />
+		<Connection pin="RTAD_0" siteNumber="1" instrument="HSD_6571_C1_S07" channel="15" />
+		<Connection pin="RTAD_0" siteNumber="2" instrument="HSD_6571_C1_S05" channel="17" />
+		<Connection pin="RTAD_0" siteNumber="3" instrument="HSD_6571_C1_S014" channel="5" />
+		<Connection pin="RTAD_1" siteNumber="0" instrument="HSD_6571_C1_S06" channel="6" />
+		<Connection pin="RTAD_1" siteNumber="1" instrument="HSD_6571_C1_S07" channel="20" />
+		<Connection pin="RTAD_1" siteNumber="2" instrument="HSD_6571_C1_S05" channel="13" />
+		<Connection pin="RTAD_1" siteNumber="3" instrument="HSD_6571_C1_S014" channel="16" />
+		<Connection pin="RTAD_2" siteNumber="0" instrument="HSD_6571_C1_S06" channel="14" />
+		<Connection pin="RTAD_2" siteNumber="1" instrument="HSD_6571_C1_S07" channel="22" />
+		<Connection pin="RTAD_2" siteNumber="2" instrument="HSD_6571_C1_S05" channel="19" />
+		<Connection pin="RTAD_2" siteNumber="3" instrument="HSD_6571_C1_S014" channel="14" />
+		<Connection pin="RTAD_3" siteNumber="0" instrument="HSD_6571_C1_S06" channel="4" />
+		<Connection pin="RTAD_3" siteNumber="1" instrument="HSD_6571_C1_S07" channel="13" />
+		<Connection pin="RTAD_3" siteNumber="2" instrument="HSD_6571_C1_S05" channel="25" />
+		<Connection pin="RTAD_3" siteNumber="3" instrument="HSD_6571_C1_S014" channel="3" />
+		<Connection pin="RTAD_4" siteNumber="0" instrument="HSD_6571_C1_S06" channel="29" />
+		<Connection pin="RTAD_4" siteNumber="1" instrument="HSD_6571_C1_S07" channel="19" />
+		<Connection pin="RTAD_4" siteNumber="2" instrument="HSD_6571_C1_S05" channel="16" />
+		<Connection pin="RTAD_4" siteNumber="3" instrument="HSD_6571_C1_S014" channel="29" />
+		<Connection pin="RTAD_P" siteNumber="0" instrument="HSD_6571_C1_S06" channel="13" />
+		<Connection pin="RTAD_P" siteNumber="1" instrument="HSD_6571_C1_S07" channel="8" />
+		<Connection pin="RTAD_P" siteNumber="2" instrument="HSD_6571_C1_S05" channel="9" />
+		<Connection pin="RTAD_P" siteNumber="3" instrument="HSD_6571_C1_S014" channel="15" />
+		<Connection pin="RTBOOT_L" siteNumber="0" instrument="HSD_6571_C1_S06" channel="23" />
+		<Connection pin="RTBOOT_L" siteNumber="1" instrument="HSD_6571_C1_S07" channel="26" />
+		<Connection pin="RTBOOT_L" siteNumber="2" instrument="HSD_6571_C1_S05" channel="10" />
+		<Connection pin="RTBOOT_L" siteNumber="3" instrument="HSD_6571_C1_S014" channel="4" />
+		<Connection pin="RT_AD_LATCH" siteNumber="0" instrument="HSD_6571_C1_S06" channel="15" />
+		<Connection pin="RT_AD_LATCH" siteNumber="1" instrument="HSD_6571_C1_S07" channel="23" />
+		<Connection pin="RT_AD_LATCH" siteNumber="2" instrument="HSD_6571_C1_S05" channel="18" />
+		<Connection pin="RT_AD_LATCH" siteNumber="3" instrument="HSD_6571_C1_S014" channel="12" />
+		<Connection pin="SCLK" siteNumber="0" instrument="HSD_6571_C1_S06" channel="10" />
+		<Connection pin="SCLK" siteNumber="1" instrument="HSD_6571_C1_S07" channel="30" />
+		<Connection pin="SCLK" siteNumber="2" instrument="HSD_6571_C1_S05" channel="22" />
+		<Connection pin="SCLK" siteNumber="3" instrument="HSD_6571_C1_S014" channel="6" />
+		<Connection pin="SCL_DUT" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="16" />
+		<Connection pin="SDA_DUT" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="17" />
+		<Connection pin="SSFLAG_L_EXT_TRIG" siteNumber="0" instrument="HSD_6571_C1_S06" channel="11" />
+		<Connection pin="SSFLAG_L_EXT_TRIG" siteNumber="1" instrument="HSD_6571_C1_S07" channel="17" />
+		<Connection pin="SSFLAG_L_EXT_TRIG" siteNumber="2" instrument="HSD_6571_C1_S05" channel="26" />
+		<Connection pin="SSFLAG_L_EXT_TRIG" siteNumber="3" instrument="HSD_6571_C1_S014" channel="19" />
+		<Connection pin="SS_L" siteNumber="0" instrument="HSD_6571_C1_S06" channel="1" />
+		<Connection pin="SS_L" siteNumber="1" instrument="HSD_6571_C1_S07" channel="6" />
+		<Connection pin="SS_L" siteNumber="2" instrument="HSD_6571_C1_S05" channel="4" />
+		<Connection pin="SS_L" siteNumber="3" instrument="HSD_6571_C1_S014" channel="1" />
+		<Connection pin="TEMP_OUT" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="25" />
+		<Connection pin="TX_INH" siteNumber="0" instrument="HSD_6571_C1_S06" channel="22" />
+		<Connection pin="TX_INH" siteNumber="1" instrument="HSD_6571_C1_S07" channel="0" />
+		<Connection pin="TX_INH" siteNumber="2" instrument="HSD_6571_C1_S05" channel="8" />
+		<Connection pin="TX_INH" siteNumber="3" instrument="HSD_6571_C1_S014" channel="24" />
+		<Connection pin="TX_RX_AB_FGEN_MB" siteNumber="0,1,2,3" instrument="FGEN_5433_C2_S08" channel="0" />
+		<Connection pin="TX_RX_AB_SCOPE" siteNumber="0,1,2,3" instrument="SCOPE_5172_C2_S02" channel="0" />
+		<Connection pin="VCC_DUT" siteNumber="0" instrument="SMU_4147_C1_S16" channel="2" />
+		<Connection pin="VCC_DUT" siteNumber="1" instrument="SMU_4147_C1_S17" channel="0" />
+		<Connection pin="VCC_DUT" siteNumber="2" instrument="SMU_4147_C1_S17" channel="1" />
+		<Connection pin="VCC_DUT" siteNumber="3" instrument="SMU_4147_C1_S17" channel="2" />
+		<Connection pin="VCC_EEPROM" siteNumber="0,1,2,3" instrument="SMU_4147_C1_S16" channel="1" />
+		<Connection pin="VZAP_A_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="23" />
+		<Connection pin="VZAP_B_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="22" />
+		<SystemConnection pin="RELAY_SUPPLY_6V" instrument="PPS_4110_C2_S12" channel="0" />
+		<SystemConnection pin="RELAY_SUPPLY_20V" instrument="PPS_4110_C2_S12" channel="1" />
+		<SystemConnection pin="SCL_EEPROM" instrument="HSD_6571_C1_S014" channel="18" />
+		<SystemConnection pin="SDA_EEPROM" instrument="HSD_6571_C1_S014" channel="17" />
+		<SystemConnection pin="VCC_TEMP" instrument="SMU_4147_C1_S16" channel="3" />
+		<SystemRelayConnection relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K34" />
+		<SystemRelayConnection relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K45" />
+		<SystemRelayConnection relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K2" />
+		<SystemRelayConnection relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K11" />
+		<SystemRelayConnection relay="K12_DUT_I2C_PATH_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K3" />
+		<SystemRelayConnection relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K12" />
+		<SystemRelayConnection relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K59" />
+		<SystemRelayConnection relay="K15_EEPROM_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K55" />
+		<SystemRelayConnection relay="K16_EEPROM_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K61" />
+		<SystemRelayConnection relay="K17_EEPROM_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K41" />
+		<SystemRelayConnection relay="K18_EEPROM_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K28" />
+		<SystemRelayConnection relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K15" />
+		<SystemRelayConnection relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K51" />
+		<SystemRelayConnection relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K43" />
+		<SystemRelayConnection relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K33" />
+		<SystemRelayConnection relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K6" />
+		<SystemRelayConnection relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K10" />
+		<SystemRelayConnection relay="K20_TRIM_READ_BACK_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K29" />
+		<SystemRelayConnection relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K60" />
+		<SystemRelayConnection relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K46" />
+		<SystemRelayConnection relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K56" />
+		<SystemRelayConnection relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K47" />
+		<SystemRelayConnection relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K62" />
+		<SystemRelayConnection relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K26" />
+		<SystemRelayConnection relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K4" />
+		<SystemRelayConnection relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K14" />
+		<SystemRelayConnection relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K13" />
+		<SystemRelayConnection relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K52" />
+		<SystemRelayConnection relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K50" />
+		<SystemRelayConnection relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K54" />
+		<SystemRelayConnection relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K8" />
+		<SystemRelayConnection relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K25" />
+		<SystemRelayConnection relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K9" />
+		<SystemRelayConnection relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K7" />
+		<SystemRelayConnection relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K63" />
+		<SystemRelayConnection relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K53" />
+		<SystemRelayConnection relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K27" />
+		<SystemRelayConnection relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K5" />
+		<SystemRelayConnection relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K24" />
+		<SystemRelayConnection relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K40" />
+		<SystemRelayConnection relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K17" />
+		<SystemRelayConnection relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K44" />
+		<SystemRelayConnection relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K18" />
+	</Connections>
+</PinMap>

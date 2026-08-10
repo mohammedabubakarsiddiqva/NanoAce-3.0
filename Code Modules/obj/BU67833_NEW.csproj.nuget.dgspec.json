@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\BU67833_NEW.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\BU67833_NEW.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\BU67833_NEW.csproj",
+        "projectName": "BU67833_NEW",
+        "projectPath": "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\BU67833_NEW.csproj",
+        "packagesPath": "C:\\Users\\Nilab02\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\NuGet.Config",
+          "C:\\Users\\Nilab02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Users\\Nilab02\\Documents\\NanoAce_NEW\\BU67833_NEW\\Code Modules\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "NationalInstruments.SemiconductorTestLibrary": {
+              "target": "Package",
+              "version": "[24.5.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.315\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
