@@ -32,7 +32,7 @@
         <PXI Name="SMU_4147_C2_S18" Model="NI PXIe-4147" Slot="18" />
 
         <!-- Function Generator(FGEN) (Changed to supported simulation model 5451) -->
-        <PXI Name="FGEN_5433_C2_S08" Model="NI PXIe-5433 (2CH)" Slot="8" />
+        <PXI Name="FGEN_5433_C2_S08" Model="NI PXIe-5433 (1CH)" Slot="8" />
 
         <!-- Digital Multimeter(DMM) -->
         <PXI Name="DMM_4081_C2_S13" Model="NI PXIe-4081" Slot="13" />
