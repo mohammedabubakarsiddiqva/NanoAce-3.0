@@ -69,26 +69,26 @@
 		<DUTPin name="AB_RESETN" />
 		<SystemPin name="SDA_EEPROM" />
 		<SystemPin name="SCL_EEPROM" />
-		<DUTPin name="VCC_EEPROM" />
+		<SystemPin name="VCC_EEPROM" />
 		<DUTPin name="PROG_A_READ" />
 		<DUTPin name="PROG_B_READ" />
-		<DUTPin name="PROG_AB_READ_PULL_UP" />
 		<DUTPin name="VZAP_A_MONOSTABLE_BYPASS" />
 		<DUTPin name="VZAP_B_MONOSTABLE_BYPASS" />
 		<DUTPin name="PROG_A_SOFT_TRIM_MB" />
 		<DUTPin name="PROG_B_SOFT_TRIM_MB" />
 		<DUTPin name="PROG_A_SOFT_TRIM_PULL_UP_MB" />
 		<DUTPin name="PROG_B_SOFT_TRIM_PULL_UP_MB" />
-		<DUTPin name="PROG_AB_PMOS_PULL_UP_MB" />
 		<SystemPin name="VCC_TEMP" />
 		<DUTPin name="TEMP_OUT" />
 		<SystemPin name="RELAY_SUPPLY_6V" />
 		<SystemPin name="RELAY_SUPPLY_20V" />
-		<DUTPin name="TX_RX_AB_SCOPE" />
-		<DUTPin name="TX_RX_AB_FGEN_MB" />
 		<DUTPin name="SS_L" />
 		<DUTPin name="PROG_A_DIGITAL" />
 		<DUTPin name="PROG_B_DIGITAL" />
+		<SystemPin name="TX_RX_AB_SCOPE" />
+		<SystemPin name="TX_RX_AB_FGEN_MB" />
+		<SystemPin name="PROG_AB_PMOS_PULL_UP_MB" />
+		<SystemPin name="PROG_AB_READ_PULL_UP" />
 	</Pins>
 	<PinGroups>
 		<PinGroup name="All_Digital">
@@ -374,8 +374,6 @@
 		<Connection pin="MSTCLR_L" siteNumber="1" instrument="HSD_6571_C1_S07" channel="18" />
 		<Connection pin="MSTCLR_L" siteNumber="2" instrument="HSD_6571_C1_S05" channel="27" />
 		<Connection pin="MSTCLR_L" siteNumber="3" instrument="HSD_6571_C1_S014" channel="20" />
-		<Connection pin="PROG_AB_PMOS_PULL_UP_MB" siteNumber="0,1,2,3" instrument="SMU_4147_C2_S16" channel="3" />
-		<Connection pin="PROG_AB_READ_PULL_UP" siteNumber="0,1,2,3" instrument="SMU_4147_C1_S16" channel="0" />
 		<Connection pin="PROG_A_DIGITAL" siteNumber="0" instrument="HSD_6571_C1_S05" channel="28" />
 		<Connection pin="PROG_A_DIGITAL" siteNumber="1" instrument="HSD_6571_C1_S07" channel="1" />
 		<Connection pin="PROG_A_DIGITAL" siteNumber="2" instrument="HSD_6571_C1_S05" channel="6" />
@@ -441,19 +439,21 @@
 		<Connection pin="TX_INH" siteNumber="1" instrument="HSD_6571_C1_S07" channel="0" />
 		<Connection pin="TX_INH" siteNumber="2" instrument="HSD_6571_C1_S05" channel="8" />
 		<Connection pin="TX_INH" siteNumber="3" instrument="HSD_6571_C1_S014" channel="24" />
-		<Connection pin="TX_RX_AB_FGEN_MB" siteNumber="0,1,2,3" instrument="FGEN_5433_C2_S08" channel="0" />
-		<Connection pin="TX_RX_AB_SCOPE" siteNumber="0,1,2,3" instrument="SCOPE_5172_C2_S02" channel="0" />
 		<Connection pin="VCC_DUT" siteNumber="0" instrument="SMU_4147_C1_S16" channel="2" />
 		<Connection pin="VCC_DUT" siteNumber="1" instrument="SMU_4147_C1_S17" channel="0" />
 		<Connection pin="VCC_DUT" siteNumber="2" instrument="SMU_4147_C1_S17" channel="1" />
 		<Connection pin="VCC_DUT" siteNumber="3" instrument="SMU_4147_C1_S17" channel="2" />
-		<Connection pin="VCC_EEPROM" siteNumber="0,1,2,3" instrument="SMU_4147_C1_S16" channel="1" />
 		<Connection pin="VZAP_A_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="23" />
 		<Connection pin="VZAP_B_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="22" />
+		<SystemConnection pin="PROG_AB_PMOS_PULL_UP_MB" instrument="SMU_4147_C2_S16" channel="3" />
+		<SystemConnection pin="PROG_AB_READ_PULL_UP" instrument="SMU_4147_C1_S16" channel="0" />
+		<SystemConnection pin="TX_RX_AB_FGEN_MB" instrument="FGEN_5433_C2_S08" channel="0" />
 		<SystemConnection pin="RELAY_SUPPLY_6V" instrument="PPS_4110_C2_S12" channel="0" />
 		<SystemConnection pin="RELAY_SUPPLY_20V" instrument="PPS_4110_C2_S12" channel="1" />
 		<SystemConnection pin="SCL_EEPROM" instrument="HSD_6571_C1_S014" channel="18" />
 		<SystemConnection pin="SDA_EEPROM" instrument="HSD_6571_C1_S014" channel="17" />
+		<SystemConnection pin="TX_RX_AB_SCOPE" instrument="SCOPE_5172_C2_S02" channel="0" />
+		<SystemConnection pin="VCC_EEPROM" instrument="SMU_4147_C1_S16" channel="1" />
 		<SystemConnection pin="VCC_TEMP" instrument="SMU_4147_C1_S16" channel="3" />
 		<SystemRelayConnection relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K34" />
 		<SystemRelayConnection relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K45" />
