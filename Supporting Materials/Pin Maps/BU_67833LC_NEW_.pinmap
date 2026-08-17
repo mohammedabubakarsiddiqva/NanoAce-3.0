@@ -293,6 +293,10 @@
 		<SystemRelay name="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" />
 		<SystemRelay name="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" />
 		<SystemRelay name="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" />
+		<SystemRelay name="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" />
+		<SystemRelay name="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" />
+		<SystemRelay name="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" />
+		<SystemRelay name="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" />
 	</Relays>
 	<RelayConfigurations>
 		<RelayConfiguration name="DutPowerUpRelayConfig">
