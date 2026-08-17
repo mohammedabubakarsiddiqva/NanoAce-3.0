@@ -488,6 +488,10 @@
 		<SystemRelayConnection relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K13" />
 		<SystemRelayConnection relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K52" />
 		<SystemRelayConnection relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K50" />
+		<SystemRelayConnection relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K0" />
+		<SystemRelayConnection relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K1" />
+		<SystemRelayConnection relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K2" />
+		<SystemRelayConnection relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K3" />
 		<SystemRelayConnection relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K54" />
 		<SystemRelayConnection relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" relayDriverModule="RELAY_2567_C1_S11" controlLine="K8" />
 		<SystemRelayConnection relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" relayDriverModule="RELAY_2567_C1_S12" controlLine="K25" />
