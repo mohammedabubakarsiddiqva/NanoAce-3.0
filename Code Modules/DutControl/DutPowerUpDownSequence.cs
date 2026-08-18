@@ -69,7 +69,7 @@ namespace BU67833_NEW.DutControl {
             // 3. Burst Idle and PowerDown patterns to cleanly place the DUT into its off state
             var allDigitalBundle = sessionManager.Digital("All_Digital");
             allDigitalBundle.BurstPattern("Idle");
-            allDigitalBundle.BurstPattern("PowerDown");
+           // allDigitalBundle.BurstPattern("PowerDown");
 
             // 4. Restore Active Load to output pins
             digitalPinsBundle.ConfigureTerminationMode(TerminationMode.ActiveLoad);
