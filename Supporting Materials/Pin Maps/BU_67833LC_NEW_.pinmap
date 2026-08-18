@@ -72,8 +72,8 @@
 		<SystemPin name="VCC_EEPROM" />
 		<DUTPin name="PROG_A_READ" />
 		<DUTPin name="PROG_B_READ" />
-		<DUTPin name="VZAP_A_MONOSTABLE_BYPASS" />
-		<DUTPin name="VZAP_B_MONOSTABLE_BYPASS" />
+		<DUTPin name="VZAP_A_MONOSTABLE_BYPASS_MB" />
+		<DUTPin name="VZAP_B_MONOSTABLE_BYPASS_MB" />
 		<DUTPin name="PROG_A_SOFT_TRIM_MB" />
 		<DUTPin name="PROG_B_SOFT_TRIM_MB" />
 		<DUTPin name="PROG_A_SOFT_TRIM_PULL_UP_MB" />
@@ -115,8 +115,8 @@
 			<PinReference pin="PROG_A_READ" />
 			<PinReference pin="PROG_B_READ" />
 			<PinReference pin="SS_L" />
-			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS" />
-			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS" />
+			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS_MB" />
+			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS_MB" />
 			<PinReference pin="PROG_A_SOFT_TRIM_MB" />
 			<PinReference pin="PROG_B_SOFT_TRIM_MB" />
 			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
@@ -141,8 +141,8 @@
 			<PinReference pin="AB_SDCLK" />
 			<PinReference pin="AB_RESETN" />
 			<PinReference pin="SS_L" />
-			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS" />
-			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS" />
+			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS_MB" />
+			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS_MB" />
 			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
 			<PinReference pin="PROG_B_SOFT_TRIM_PULL_UP_MB" />
 		</PinGroup>
@@ -306,7 +306,7 @@
 			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
-			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
@@ -322,7 +322,399 @@
 			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
 			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
 			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
-			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTxSite4">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTxSite3">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTxSite1">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTxSite2">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTrimSite4">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTrimSite3">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTrimSite2">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigTrimSite1">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
 			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
 			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
 			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
@@ -341,6 +733,208 @@
 			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
 			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigEEPROMSite4">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigEEPROMSite3">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigEEPROMSite2">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DutConfigEEPROMSite1">
+			<RelayPosition relay="K8_TX_RX_BUS_SELECT_SCOPE_RELAY" position="Open" />
+			<RelayPosition relay="K9_TX_RX_SCOPE_SELECT_SCOPE_RELAY" position="Closed" />
+			<RelayPosition relay="K12_DUT_I2C_PATH_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K13_DUT_SDA_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K14_DUT_SCL_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K11_EEPROM_I2C_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K10_EEPROM_WP_VCC_GND_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K20_TRIM_READ_BACK_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K19_TRIM_READ_BACK_PULL_UP_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K21_TRIM_SOFT_HARD_SELECT_1_RELAY" position="Open" />
+			<RelayPosition relay="K22_TRIM_SOFT_HARD_SELECT_2_RELAY" position="Open" />
+			<RelayPosition relay="K11_TRIM_RESISTOR_SELECT_1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K12_TRIM_RESISTOR_SELECT_2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K10_TRIM_VZAP_MB_DB_CONNECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K15_TRIM_SOFT_PROG_A_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K16_TRIM_SOFT_PROG_B_PULL_UP_DIRECT_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K8_TX_RX_A_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K3_TX_RX_A_BUS_CARD_CHA1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K4_TX_RX_A_BUS_CARD_CHA2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K7_TX_RX_B_TRANS_DIR_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_TX_RX_B_BUS_CARD_CHB1_MB_RELAY" position="Open" />
+			<RelayPosition relay="K2_TX_RX_B_BUS_CARD_CHB2_MB_RELAY" position="Open" />
+			<RelayPosition relay="K5_TX_RX_COMMON_AWG_FGEN_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K6_TX_RX_AWG_BUS_SELECT_MB_RELAY" position="Closed" />
+			<RelayPosition relay="K14_TX_RX_A_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K13_TX_RX_B_TRANS_BYPASS_SELECT_MB_RELAY" position="Open" />
+			<RelayPosition relay="K1_S2_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S1_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S3_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K1_S4_TRIM_PROG_AB_DIGITAL_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K15_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K16_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K17_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K18_EEPROM_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K5_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K6_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K7_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K2_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K3_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K4_TRANSCEIVER_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K9_TRIM_RESISTOR_SELECT_3_MB_RELAY" position="Open" />
+			<RelayPosition relay="K23_DUT_TRANSCEIVER_CONN_DISCONN_RELAY" position="Open" />
+			<RelayPosition relay="K24_DUT_TRANSCEIVER_CONN_DISSCONN_RELAY" position="Open" />
+			<RelayPosition relay="K25_S1_EEPROM_GND_SITE_SELECT_RELAY" position="Closed" />
+			<RelayPosition relay="K25_S2_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S3_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
+			<RelayPosition relay="K25_S4_EEPROM_GND_SITE_SELECT_RELAY" position="Open" />
 		</RelayConfiguration>
 	</RelayConfigurations>
 	<Sites>
@@ -447,8 +1041,8 @@
 		<Connection pin="VCC_DUT" siteNumber="1" instrument="SMU_4147_C1_S17" channel="0" />
 		<Connection pin="VCC_DUT" siteNumber="2" instrument="SMU_4147_C1_S17" channel="1" />
 		<Connection pin="VCC_DUT" siteNumber="3" instrument="SMU_4147_C1_S17" channel="2" />
-		<Connection pin="VZAP_A_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="23" />
-		<Connection pin="VZAP_B_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="22" />
+		<Connection pin="VZAP_A_MONOSTABLE_BYPASS_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="23" />
+		<Connection pin="VZAP_B_MONOSTABLE_BYPASS_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="22" />
 		<SystemConnection pin="PROG_AB_PMOS_PULL_UP_MB" instrument="SMU_4147_C2_S16" channel="3" />
 		<SystemConnection pin="PROG_AB_READ_PULL_UP" instrument="SMU_4147_C1_S16" channel="0" />
 		<SystemConnection pin="TX_RX_AB_FGEN_MB" instrument="FGEN_5433_C2_S08" channel="0" />
