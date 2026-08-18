@@ -107,7 +107,6 @@
 			<PinReference pin="INT_L" />
 			<PinReference pin="SSFLAG_L_EXT_TRIG" />
 			<PinReference pin="MSTCLR_L" />
-			<PinReference pin="CLOCK_IN" />
 			<PinReference pin="SCL_DUT" />
 			<PinReference pin="SDA_DUT" />
 			<PinReference pin="AB_SDCLK" />
