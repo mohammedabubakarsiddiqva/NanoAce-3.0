@@ -21,7 +21,8 @@ namespace BU_67833LC.DutControl
             ISemiconductorModuleContext[] activeSiteContexts = tsmContext.GetSiteSemiconductorModuleContexts();
 
             ISemiconductorModuleContext firstSiteContext = activeSiteContexts.FirstOrDefault();
-
+            //Load Record - 1 : Configuring the NanoAce as Remote Terminal Mode(RT)
+            //Load Record - 2 : Configuring the NanoAce as Enhanced  Mode
             ushort[] image = { 0x4DDC, 0xEACE, 0x8001, 0x0001, 0x8FFF, 0x8001, 0x0007, 0x8000, 0xC0DE, 0x0B91 };
 
             // Define bitmasks for register 31H [4, 7]
