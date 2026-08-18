@@ -55,7 +55,7 @@ namespace BU67833_NEW.TestSteps
             patternPinBundle.ConfigureHistoryRAM(hramSettings);
 
             // 6. Burst the read pattern to capture the failure cycle 
-            patternPinBundle.BurstPattern("Dummy_Pattern_Read");
+            patternPinBundle.BurstPattern(readPatternName);
 
             // 7. Fetch captured failure results from History RAM
             SiteData<HistoryRAMResults> siteData = patternPinBundle.FetchHistoryRAMResults();
@@ -139,7 +139,7 @@ namespace BU67833_NEW.TestSteps
             digitalPatternBundle.ConfigureHistoryRAM(hramSettings);
 
             // 6. Burst the read pattern to capture the failure cycle 
-            digitalPatternBundle.BurstPattern("Dummy_Pattern_Read");
+            digitalPatternBundle.BurstPattern(parityreadPattern);
 
             // 7. Fetch captured failure results from History RAM
             SiteData<HistoryRAMResults> siteData = digitalPatternBundle.FetchHistoryRAMResults();
