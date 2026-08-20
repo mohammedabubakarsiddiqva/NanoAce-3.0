@@ -8,6 +8,7 @@ using NationalInstruments.SemiconductorTestLibrary.InstrumentAbstraction.DCPower
 using NationalInstruments.SemiconductorTestLibrary.InstrumentAbstraction.Digital;
 using NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using static BU67833_NEW.DutControl.DutPowerUpDownSequence;
 using static BU67833_NEW.DutControl.DutRegisterMap;
@@ -38,7 +39,9 @@ namespace BU67833_NEW.TestSteps
             foreach (ISemiconductorModuleContext semiconductorModuleContext in semiconductorModuleContexts)
             {
                 //Apply the relay configuration for the current site
-
+                int siteNumber = semiconductorModuleContext.SiteNumbers.FirstOrDefault<int>();
+                string configName = "DutConfigTxSite" + siteNumber; //(Added by Abhiraj)
+                semiconductorModuleContext.ApplyRelayConfiguration(configName); //(Added by Abhiraj)
                 //Power up the dut for the current site.
                 DutPowerUpSequence(semiconductorModuleContext);
 
@@ -102,11 +105,14 @@ namespace BU67833_NEW.TestSteps
             if (bus == "A")
             {
                 //Apply the relay configruation to choose the busA transformer coupled
+                siteContext.ControlRelay("K8_TX_RX_BUS_SELECT_SCOPE_RELAY", RelayDriverAction.CloseRelay);
             }
             else
             {
                 //Apply the relay configuration to choose the busB transfromer coupled
-            };
+                siteContext.ControlRelay("K8_TX_RX_BUS_SELECT_SCOPE_RELAY", RelayDriverAction.OpenRelay);
+            }
+            ;
             PreciseWait(0.01);
 
             //Create a object for the busCard1 with the mode set to Monitor Terminal(MT)
