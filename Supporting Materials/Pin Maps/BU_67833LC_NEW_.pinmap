@@ -72,8 +72,8 @@
 		<SystemPin name="VCC_EEPROM" />
 		<DUTPin name="PROG_A_READ" />
 		<DUTPin name="PROG_B_READ" />
-		<DUTPin name="VZAP_A_MONOSTABLE_BYPASS_MB" />
-		<DUTPin name="VZAP_B_MONOSTABLE_BYPASS_MB" />
+		<DUTPin name="VZAP_A_MONOSTABLE_BYPASS" />
+		<DUTPin name="VZAP_B_MONOSTABLE_BYPASS" />
 		<DUTPin name="PROG_A_SOFT_TRIM_MB" />
 		<DUTPin name="PROG_B_SOFT_TRIM_MB" />
 		<DUTPin name="PROG_A_SOFT_TRIM_PULL_UP_MB" />
@@ -107,11 +107,20 @@
 			<PinReference pin="INT_L" />
 			<PinReference pin="SSFLAG_L_EXT_TRIG" />
 			<PinReference pin="MSTCLR_L" />
-			<PinReference pin="AB_RESETN" />
-			<PinReference pin="SS_L" />
-			<PinReference pin="PROG_B_DIGITAL" />
+			<PinReference pin="SCL_DUT" />
+			<PinReference pin="SDA_DUT" />
 			<PinReference pin="AB_SDCLK" />
-			<PinReference pin="PROG_A_DIGITAL" />
+			<PinReference pin="AB_RESETN" />
+			<PinReference pin="PROG_A_READ" />
+			<PinReference pin="PROG_B_READ" />
+			<PinReference pin="SS_L" />
+			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS" />
+			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS" />
+			<PinReference pin="PROG_A_SOFT_TRIM_MB" />
+			<PinReference pin="PROG_B_SOFT_TRIM_MB" />
+			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
+			<PinReference pin="PROG_B_SOFT_TRIM_PULL_UP_MB" />
+			<PinReference pin="TEMP_OUT" />
 		</PinGroup>
 		<PinGroup name="Digital_Input_Pins">
 			<PinReference pin="SCLK" />
@@ -131,8 +140,8 @@
 			<PinReference pin="AB_SDCLK" />
 			<PinReference pin="AB_RESETN" />
 			<PinReference pin="SS_L" />
-			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS_MB" />
-			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS_MB" />
+			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS" />
+			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS" />
 			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
 			<PinReference pin="PROG_B_SOFT_TRIM_PULL_UP_MB" />
 		</PinGroup>
@@ -1031,8 +1040,8 @@
 		<Connection pin="VCC_DUT" siteNumber="1" instrument="SMU_4147_C1_S17" channel="0" />
 		<Connection pin="VCC_DUT" siteNumber="2" instrument="SMU_4147_C1_S17" channel="1" />
 		<Connection pin="VCC_DUT" siteNumber="3" instrument="SMU_4147_C1_S17" channel="2" />
-		<Connection pin="VZAP_A_MONOSTABLE_BYPASS_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="23" />
-		<Connection pin="VZAP_B_MONOSTABLE_BYPASS_MB" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="22" />
+		<Connection pin="VZAP_A_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="23" />
+		<Connection pin="VZAP_B_MONOSTABLE_BYPASS" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S014" channel="22" />
 		<SystemConnection pin="PROG_AB_PMOS_PULL_UP_MB" instrument="SMU_4147_C2_S16" channel="3" />
 		<SystemConnection pin="PROG_AB_READ_PULL_UP" instrument="SMU_4147_C1_S16" channel="0" />
 		<SystemConnection pin="TX_RX_AB_FGEN_MB" instrument="FGEN_5433_C2_S08" channel="0" />

@@ -24,7 +24,10 @@ namespace BU67833_NEW.TestSteps
             {
                 //Apply the site specific relay configuration
 
-                int siteNumber = semiconductorModuleContext.SiteNumbers.FirstOrDefault();
+                int siteNumber = semiconductorModuleContext.SiteNumbers.FirstOrDefault<int>();
+                
+                string configName = "DutConfigTxSite" + siteNumber; //(Added by Abhiraj)
+                semiconductorModuleContext.ApplyRelayConfiguration(configName); //(Added by Abhiraj)
 
                 //Power Up the Dut for current site
                 DutPowerUpSequence(semiconductorModuleContext);

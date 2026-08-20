@@ -21,11 +21,12 @@ namespace BU67833_NEW.TestSteps
         {
             foreach (ISemiconductorModuleContext semiconductorModuleContext in tsmContext.GetSiteSemiconductorModuleContexts())
             {
+                //Apply the relay Configuration to choose the current site 
 
-                
                 int siteNumber = semiconductorModuleContext.SiteNumbers.FirstOrDefault<int>();
+                string configName = "DutConfigTxSite" + siteNumber; //(Added by Abhiraj)
+                semiconductorModuleContext.ApplyRelayConfiguration(configName); //(Added by Abhiraj)
 
-                //Apply the relay Configuration to choose the current site
 
                 //PowerUp the DUT for the current site
                 DutPowerUpSequence(semiconductorModuleContext);

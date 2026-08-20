@@ -38,6 +38,9 @@ namespace BU67833_NEW.TestSteps
             foreach (ISemiconductorModuleContext semiconductorModuleContext in semiconductorModuleContexts)
             {
                 //Apply the relay configuration for teh current site
+                int siteNumber = semiconductorModuleContext.SiteNumbers.FirstOrDefault<int>();
+                string configName = "DutConfigTxSite" + siteNumber; //(Added by Abhiraj)
+                semiconductorModuleContext.ApplyRelayConfiguration(configName); //(Added by Abhiraj)
 
                 int count = semiconductorModuleContext.SiteNumbers.Count;
 
@@ -98,11 +101,13 @@ namespace BU67833_NEW.TestSteps
             {
                 busIndex = 1;
                 //Apply the relay configuration for the Channel A
+                siteContext.ControlRelay("K8_TX_RX_BUS_SELECT_SCOPE_RELAY", RelayDriverAction.CloseRelay);
             }
             else
             {
                 busIndex = 0;
                 //Apply the relay configuration for the Channel B
+                siteContext.ControlRelay("K8_TX_RX_BUS_SELECT_SCOPE_RELAY", RelayDriverAction.OpenRelay);
             }
 
             PreciseWait(new double?(0.05));
