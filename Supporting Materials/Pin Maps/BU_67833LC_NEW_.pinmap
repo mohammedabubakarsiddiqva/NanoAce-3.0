@@ -107,20 +107,11 @@
 			<PinReference pin="INT_L" />
 			<PinReference pin="SSFLAG_L_EXT_TRIG" />
 			<PinReference pin="MSTCLR_L" />
-			<PinReference pin="SCL_DUT" />
-			<PinReference pin="SDA_DUT" />
-			<PinReference pin="AB_SDCLK" />
 			<PinReference pin="AB_RESETN" />
-			<PinReference pin="PROG_A_READ" />
-			<PinReference pin="PROG_B_READ" />
 			<PinReference pin="SS_L" />
-			<PinReference pin="VZAP_A_MONOSTABLE_BYPASS_MB" />
-			<PinReference pin="VZAP_B_MONOSTABLE_BYPASS_MB" />
-			<PinReference pin="PROG_A_SOFT_TRIM_MB" />
-			<PinReference pin="PROG_B_SOFT_TRIM_MB" />
-			<PinReference pin="PROG_A_SOFT_TRIM_PULL_UP_MB" />
-			<PinReference pin="PROG_B_SOFT_TRIM_PULL_UP_MB" />
-			<PinReference pin="TEMP_OUT" />
+			<PinReference pin="PROG_B_DIGITAL" />
+			<PinReference pin="AB_SDCLK" />
+			<PinReference pin="PROG_A_DIGITAL" />
 		</PinGroup>
 		<PinGroup name="Digital_Input_Pins">
 			<PinReference pin="SCLK" />

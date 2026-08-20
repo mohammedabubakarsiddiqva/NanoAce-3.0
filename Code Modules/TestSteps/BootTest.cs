@@ -27,7 +27,7 @@ namespace BU67833_NEW.TestSteps
             // 3. Put all digital pins in the idle state for real-time boot
             var allDigitalBundle = sessionManager.Digital("All_Digital");
 
-            allDigitalBundle.BurstPattern("RtBoot_Idle");
+            allDigitalBundle.BurstPattern("Idle");
 
             // 4. Wait 300 ms for boot signals to settle (Uses static utility import for clean syntax)
             PreciseWait(0.3);
